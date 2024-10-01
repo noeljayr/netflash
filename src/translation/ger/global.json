@@ -1,0 +1,101 @@
+{
+  "header": {
+    "back": "zurück zu",
+    "contact": "Kontakt treten",
+    "about": "über uns"
+  },
+  "hero": {
+    "span1": "Ermächtigen.",
+    "span2": "Innovieren.",
+    "span3": "Erheben.",
+    "cta": "Kontaktieren Sie uns",
+    "p1": "Steigern Sie Ihre digitale Präsenz weltweit mit maßgeschneiderten Website-Lösungen für Technikbegeisterte. Bei Netflash verbinden wir Kreativität mit Code, um Online-Meisterwerke zu schaffen.",
+    "heroImageRef1": "Erstellen Sie atemberaubende, benutzerfreundliche Designs, die jeden Klick zum Vergnügen machen.",
+    "heroImageRef2": "Erwecken Sie Ihre Ideen mit reibungslosen, leistungsstarken Websites und Apps zum Leben.",
+    "heroImageRef3": " Halten Sie Ihre Website schnell, sicher und immer online. Mit unserem sorgenfreien Hosting."
+  },
+  "contact_form": {
+    "dialog_title": "Send us a message",
+    "name": "Name",
+    "name_placeholder": "Vollständiger Name",
+    "email": "Email",
+    "email_placeholder": "beispiel@mail.com",
+    "subject": "Thema",
+    "subject_placeholder": "zB Webentwicklungsanfrage",
+    "message": "Nachricht",
+    "message_placeholder": "Beginnen Sie mit der Eingabe...",
+    "send": "schicken"
+  },
+
+  "projects": {
+    "show_more": "mehr anzeigen",
+    "view": "Ansehen",
+    "category": "Kategorien",
+    "read_more": "Mehr lesen",
+    "our_proj": "Unsere Projekte"
+  },
+  "why_us": {
+    "title": "warum wir?",
+    "h2": "So sorgt Netflash für Wachstum in Ihrem Unternehmen",
+    "p": "Wir schließen die Lücke zwischen Vision und Erfolg. Entdecken Sie, warum wir die richtige Wahl sind",
+    "ADataCols": {
+      "text1": "Fachwissen: Unser Team aus Technikbegeisterten bringt jahrelange Erfahrung und fundiertes technisches Wissen in jedes Projekt ein.",
+      "text2": "Maßgeschneiderte Lösungen: Wir verstehen Ihre individuellen Bedürfnisse und bieten individuelle Website-Lösungen, die Ihren Zielen entsprechen.",
+      "text3": "Kreative Exzellenz: Wir kombinieren modernstes Design mit professioneller Programmierung und sorgen so dafür, dass Ihre Website in der digitalen Landschaft hervorsticht.",
+      "text4": "Qualitätssicherung: Wir stellen sicher, dass jedes Projekt auf einwandfreie Leistung, Sicherheit und nahtloses Benutzererlebnis getestet wird und zuverlässige, ausgefeilte Ergebnisse liefert, die die Erwartungen übertreffen."
+    }
+  },
+  "get_started": {
+    "team": {
+      "title": "Unser Team"
+    }
+  },
+  "contact": {
+    "p": "Bei Netflash sind Transparenz und Rechtskonformität integraler Bestandteil unseres Engagements für Spitzenleistungen. Auf dieser Seite finden Sie wichtige Informationen zu unserer Agentur, einschließlich Kontaktdaten, Namen der Geschäftsführer, Handelsregister und Umsatzsteuer-Identifikationsnummer. Darüber hinaus finden Sie Einzelheiten zur redaktionellen Verantwortung, Datenschutzrichtlinie und wichtige Haftungsausschlüsse. Wir schätzen Ihr Vertrauen, Netflash für Ihre Entwicklungs- und Designanforderungen gewählt zu haben, und wir bemühen uns sicherzustellen, dass Ihre Online-Erfahrung mit uns sowohl informativ als auch sicher ist.",
+    "date": "Datum des Inkrafttretens: 1. März 2024",
+    "title1": {
+      "label": "Datenschutzrichtlinie",
+      "p": "Bei Netflash verpflichten wir uns, Ihre Privatsphäre zu schützen. Diese Datenschutzrichtlinie erläutert, wie wir Ihre Daten sammeln, verwenden, weitergeben und schützen, wenn Sie unsere Website besuchen oder unsere Dienste für Webentwicklung, Design und Hosting nutzen. Bitte lesen Sie diese Datenschutzrichtlinie sorgfältig durch. Wenn Sie mit den Bedingungen dieser Richtlinie nicht einverstanden sind, greifen Sie bitte nicht auf die Site zu.",
+      "subtitle1": {
+        "label": "Von uns erfasste Daten",
+        "p": "Wir können auf verschiedene Weise Informationen über Sie sammeln, unter anderem:"
+      },
+      "subtitle2": {
+        "label": "Personenbezogene Daten",
+        "p": "Wenn Sie mit uns in Kontakt treten (z. B. indem Sie Formulare ausfüllen, uns wegen Dienstleistungen kontaktieren oder Dienstleistungen erwerben), erfassen wir möglicherweise personenbezogene Daten wie:",
+        "list1": "Name",
+        "list2": "E-Mail-Adresse",
+        "list3": "Telefonnummer",
+        "list4": "Alle anderen Informationen, die Sie angeben möchten"
+      },
+      "subtitle3": {
+        "label": "Unsere Nutzung Ihrer Daten",
+        "p": "Wir verwenden die von uns gesammelten Informationen auf verschiedene Weise, unter anderem um:",
+        "list1": "Bereitstellung und Wartung unserer Dienste, einschließlich Webdesign, Entwicklung und Hosting.",
+        "list2": "Verarbeiten Sie Ihre Transaktionen und senden Sie servicebezogene Mitteilungen.",
+        "list3": "Beantworten Sie Ihre Anfragen, Supportanfragen oder Ihr Feedback.",
+        "list4": "Verwalten Sie unsere internen Geschäftsabläufe, wie Rechnungsstellung und Abrechnung."
+      },
+      "subtitle4": {
+        "label": "So geben wir Ihre Daten weiter",
+        "p": "Wir verkaufen oder vermieten Ihre personenbezogenen Daten nicht an Dritte. Wir können Ihre Daten jedoch unter folgenden Umständen weitergeben:",
+        "list1": "Dienstanbieter:",
+        "list1b": "Wir können Ihre Informationen an Drittanbieter weitergeben, die uns bei der Bereitstellung unserer Dienste unterstützen (z. B. Zahlungsabwickler, Hosting-Anbieter).",
+        "list2": "Gesetzliche Anforderungen:",
+        "list2b": "Wir können Ihre Daten offenlegen, wenn wir gesetzlich dazu verpflichtet sind oder als Reaktion auf gültige rechtliche Anfragen von Behörden."
+      }
+    },
+    "title2": "Haftungsausschluss",
+    "title2c": "Die Inhalte unseres Internetauftritts wurden mit größter Sorgfalt und nach bestem Gewissen erstellt. Dennoch kann für die Aktualität, Vollständigkeit und Richtigkeit der bereitgestellten Seiten keine Gewähr übernommen werden.",
+    "title3": "Copyright",
+    "title3c": "Die auf diesen Seiten erstellten Inhalte und Werke unterliegen dem Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers."
+  },
+  "footer": {
+    "outro": "Personalized software-",
+    "outro2": "und Multimedialösungen.",
+    "text1": "Impressum",
+    "text2": "Datenschutzerklarung",
+    "text3": "Weitere Marken",
+    "contact": "Kontaktieren Sie uns"
+  }
+}

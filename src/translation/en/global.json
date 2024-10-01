@@ -1,0 +1,100 @@
+{
+  "header": {
+    "back": "Back to",
+    "contact": "Contact",
+    "about": "About us"
+  },
+  "hero": {
+    "span1": "Empower.",
+    "span2": "Innovate.",
+    "span3": "Elevate.",
+    "cta": "Get in Contact",
+    "p1": "Elevate your digital presence globally with tailored website solutions for tech enthusiasts. At Netflash, we fuse creativity with code to craft online masterpieces.",
+    "heroImageRef1": "Create stunning, user-friendly designs that make every click a joy.",
+    "heroImageRef2": "Bring your ideas to life with smooth, high-performing websites and apps.",
+    "heroImageRef3": " Keep your website fast, secure, and always online. With our worry-free hosting."
+  },
+  "contact_form": {
+    "dialog_title": "Send us a message",
+    "name": "Name",
+    "name_placeholder": "Full Name",
+    "email": "Email",
+    "email_placeholder": "example@mail.com",
+    "subject": "Subject",
+    "subject_placeholder": "e.g. Web development enquiry",
+    "message": "Message",
+    "message_placeholder": "Start typing...",
+    "send": "Send"
+  },
+  "projects": {
+    "show_more": "Show More",
+    "view": "View",
+    "category": "Categories",
+    "read_more": "Read More",
+    "our_proj": "Our Projects"
+  },
+  "why_us": {
+    "title": "Why us?",
+    "h2": "How Netflash Create Growth Your Business",
+    "p": "We bridge the gap between vision and success, discover why we’re the right choice",
+    "ADataCols": {
+      "text1": "Expertise: Our team of tech enthusiasts brings years of experience and deep technical knowledge to every project.",
+      "text2": "Tailored Solutions: We understand your unique needs and provide customized website solutions to suit your goals.",
+      "text3": "Creative Excellence: We blend cutting-edge design with expert programming, ensuring your website stands out in the digital landscape.",
+      "text4": "Quality Assurance: We ensure every project is tested for flawless performance, security, and a seamless user experience, delivering reliable, polished results that exceed expectations."
+    }
+  },
+  "get_started": {
+    "team": {
+      "title": "Our Team"
+    }
+  },
+  "contact": {
+    "p": "At Netflash, transparency and legal compliance are integral to our commitment to excellence. This page provides essential information about our agency, including contact details, the names of managing directors, commercial registration, and VAT identification number. Additionally, you'll find details about the editorial responsibility, privacy policy, and important disclaimers. We appreciate your trust in choosing Netflash for your development and design needs, and we strive to ensure that your online experience with us is both informative and secure.",
+    "date": "Effective Date: 1 March 2024",
+    "title1": {
+      "label": "Privacy Policy",
+      "p": "At Netflash, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services for web development, design, and hosting. Please read this Privacy Policy carefully. If you do not agree with the terms of this policy, please do not access the Site.",
+      "subtitle1": {
+        "label": "Information We Collect",
+        "p": "We may collect information about you in a variety of ways, including:"
+      },
+      "subtitle2": {
+        "label": "Personal Data",
+        "p": "When you engage with us (e.g., by filling out forms, contacting us for services, or purchasing services), we may collect personally identifiable information such as:",
+        "list1": "Name",
+        "list2": "Email Address",
+        "list3": "Phone Number",
+        "list4": "Any other information you choose to provide"
+      },
+      "subtitle3": {
+        "label": "How We Use Your Information",
+        "p": "We use the information we collect in various ways, including to:",
+        "list1": "Provide and maintain our services, including web design, development, and hosting.",
+        "list2": "Process your transactions and send service-related communications.",
+        "list3": "Respond to your inquiries, support requests, or feedback.",
+        "list4": "Manage our internal business operations, such as invoicing and billing."
+      },
+      "subtitle4": {
+        "label": "How We Share Your Information",
+        "p": "We do not sell or rent your personal information to third parties. However, we may share your data in the following circumstances:",
+        "list1": "Service Providers:",
+        "list1b": "We may share your information with third-party vendors that assist us with providing our services (e.g., payment processors, hosting providers).",
+        "list2": "Legal Requirements:",
+        "list2b": "We may disclose your information if required to do so by law or in response to valid legal requests by public authorities."
+      }
+    },
+    "title2": "Haftungsausschluss",
+    "title2c": "The content of our website has been compiled with meticulous care and to the best of our knowledge. However, we cannot assume any liability for the up-to-dateness, completeness, or accuracy of any of the pages.",
+    "title3": "Copyright",
+    "title3c": "The content and works provided on these web pages are governed by the copyright laws. Duplication, processing, distribution, or any form of commercialization of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator."
+  },
+  "footer": {
+    "outro": "Personalized software-",
+    "outro2": "and multimedia solutions.",
+    "text1": "Impressum",
+    "text2": "Privacy Policy",
+    "text3": "Other brands",
+    "contact": "Contact Us"
+  }
+}

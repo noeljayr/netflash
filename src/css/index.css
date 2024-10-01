@@ -1,0 +1,33 @@
+.contact-form{
+    background-color: #0e0e11;
+    border: 1px solid #25252c;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 5px;
+    padding-left: 0.5rem;
+    outline: none;
+    border: none;
+    background-color: #484858;
+}
+
+.contact-form textarea{
+    resize: none;
+    height: 5rem;
+    padding-top: 0.5rem;
+}
+
+.contact-form .p-info{
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+
+.contact-form .cta{
+    background-color: #3355b4;
+    height: 2.5rem;
+    border-radius: 5px;
+}
