@@ -216,7 +216,7 @@ const Projects = () => {
                       <div
                         className="
                         flex
-                        px-2
+                    
                         gap-2
                         items-center
                         justify-between

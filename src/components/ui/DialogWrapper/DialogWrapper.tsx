@@ -1,4 +1,7 @@
-import React from "react";
+import { useState, useRef } from "react";
+import { sendEmail } from "../../../utils/mail.utils";
+import ContactForm from "../../ContactForm";
+
 import {
   Button,
   Dialog,
@@ -43,58 +46,7 @@ const DialogWrapper = ({
           <DialogTitle>{DialogTitleText}</DialogTitle>
         </DialogHeader>
 
-        <div className="p-info grid gap-4">
-          <div className="flex flex-col items-start w-full gap-2">
-            <label htmlFor="name" className="text-right">
-              {translate("contact_form.name")}
-            </label>
-            <input
-              id="name"
-              placeholder={translate("contact_form.name_placeholder")}
-              type="text"
-              required
-              defaultValue=""
-            />
-          </div>
-          <div className="flex flex-col items-start w-full gap-2">
-            <label htmlFor="email" className="text-right">
-              {translate("contact_form.email")}
-            </label>
-            <input
-              id="email"
-              placeholder={translate("contact_form.email_placeholder")}
-              type="email"
-              required
-              defaultValue=""
-            />
-          </div>
-        </div>
-
-        <div className="flex flex-col items-start w-full gap-2">
-          <label htmlFor="subject" className="text-right">
-            {translate("contact_form.subject")}
-          </label>
-          <input
-            id="subject"
-            placeholder={translate("contact_form.subject_placeholder")}
-            required
-            defaultValue=""
-          />
-        </div>
-
-        <div className="flex flex-col items-start w-full gap-2">
-          <label htmlFor="subject" className="text-right">
-            {translate("contact_form.message")}
-          </label>
-          <textarea
-            name="message"
-            id="message"
-            placeholder={translate("contact_form.message_placeholder")}
-            defaultValue=""
-          ></textarea>
-        </div>
-
-        <button className="cta">{translate("contact_form.send")}</button>
+        <ContactForm />
       </DialogContent>
     </Dialog>
   );
