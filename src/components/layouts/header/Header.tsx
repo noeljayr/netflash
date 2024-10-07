@@ -9,9 +9,7 @@ import { useTranslation } from "react-i18next";
 const Header = () => {
   const [translate, i18n] = useTranslation("global");
 
-  const handleChangeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
+ 
 
   const [menu, setMenu] = useState<boolean>(false);
   const location = useLocation();
@@ -134,29 +132,14 @@ const Header = () => {
               </NavLink>
             )}
 
-            <div className="languauge flex gap-4">
-              <button className="text-xs ${}"
+            
+            <NavLink
                 onClick={() => {
-                  handleChangeLanguage("ger");
+                  document.body.classList.remove("overflow-hidden");
+                  setMenu(false);
                 }}
-              >
-                GER
-              </button>
-              <button className="text-xs"
-                onClick={() => {
-                  handleChangeLanguage("en");
-                }}
-              >
-                EN
-              </button>
-
-              <NavLink
-              onClick={() => {
-                document.body.classList.remove("overflow-hidden");
-                setMenu(false);
-              }}
-              to="/contact"
-              className="
+                to="/contact"
+                className="
                 md:bg-[#3e60c1ba]
                 md:hover:bg-[#3E60C1]
                 md:text-white
@@ -168,12 +151,9 @@ const Header = () => {
                 place-self-center
                 rounded-full
               "
-            >
-               {translate("header.contact")}
-            </NavLink>
-            </div>
-
-           
+              >
+                {translate("header.contact")}
+              </NavLink>
           </div>
         </div>
 

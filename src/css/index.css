@@ -35,3 +35,24 @@
   position: relative;
   top: -2px;
 }
+
+.languauge .active-language {
+  background-color: #3e60c1ba; /* Example: green background */
+  color: white;;
+  opacity: 1;
+  border: 1px solid transparent;
+}
+
+
+
+.languauge{
+  grid-template-columns: 1fr 1fr;
+  width: 6rem;
+}
+
+.languauge button{
+  width: 100%;
+  border: 1px solid #3e60c1ba;
+  border-radius: 5px;
+  opacity: 0.5;
+}

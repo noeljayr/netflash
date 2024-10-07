@@ -15,6 +15,11 @@ const Footer = () => {
   const [translate, i18n] = useTranslation("global");
   const data = [socail2, socail3, socail4];
 
+  const handleChangeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem("language", lang);
+  };
+
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
     if (window.innerWidth >= 540) {
@@ -87,6 +92,26 @@ const Footer = () => {
           >
             © 2024 NetFlash <br />
             {translate("footer.outro")} <br /> {translate("footer.outro2")}
+            <br />
+            <div className="languauge mt-4 flex gap-2">
+              <button
+                className={`text-xs p-1 h-fit ${
+                  i18n.language === "ger" ? "active-language" : ""
+                }`}
+                onClick={() => handleChangeLanguage("ger")}
+              >
+                GER
+              </button>
+
+              <button
+                className={`text-xs p-1 h-fit ${
+                  i18n.language === "en" ? "active-language" : ""
+                }`}
+                onClick={() => handleChangeLanguage("en")}
+              >
+                EN
+              </button>
+            </div>
           </p>
         </div>
 

@@ -187,6 +187,7 @@ const Projects = () => {
                       <div className="flex items-start justify-between mb-2">
                         <h3
                           className="
+                          card-title
                         text-[.9rem]
                         ym:text-[1rem]
                         sm:text-[1.3rem]
