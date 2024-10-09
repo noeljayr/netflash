@@ -1,3 +1,11 @@
+body {
+  overflow-x: hidden;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
 .contact-form {
   background-color: #0e0e11;
   border: 1px solid #25252c;
@@ -38,19 +46,19 @@
 
 .languauge .active-language {
   background-color: #3e60c1ba; /* Example: green background */
-  color: white;;
+  color: white;
   opacity: 1;
   border: 1px solid transparent;
 }
 
-
-
-.languauge{
+.languauge {
   grid-template-columns: 1fr 1fr;
   width: 6rem;
 }
 
-.languauge button{
+
+
+.languauge button {
   width: 100%;
   border: 1px solid #3e60c1ba;
   border-radius: 5px;

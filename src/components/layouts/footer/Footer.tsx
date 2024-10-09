@@ -93,7 +93,7 @@ const Footer = () => {
             © 2024 NetFlash <br />
             {translate("footer.outro")} <br /> {translate("footer.outro2")}
             <br />
-            <div className="languauge mt-4 flex gap-2">
+            <div className="languauge mt-4 flex gap-2 max-sm:ml-12">
               <button
                 className={`text-xs p-1 h-fit ${
                   i18n.language === "ger" ? "active-language" : ""
