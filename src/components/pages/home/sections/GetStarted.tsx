@@ -40,35 +40,35 @@ const GetStarted = () => {
   const getStarted = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    if (window.innerWidth >= 540) {
-      gsap.registerPlugin(ScrollTrigger);
-      const title = new SplitType("#getstarted .get_started_title", {
-        types: "words, chars",
-      });
+    // if (window.innerWidth >= 540) {
+    //   gsap.registerPlugin(ScrollTrigger);
+    //   const title = new SplitType("#getstarted .get_started_title", {
+    //     types: "words, chars",
+    //   });
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#getstarted",
-          start: "top 70%",
-          end: "140% bottom",
-          scrub: 1.1,
-          // markers: trueo
-        },
-      });
+    //   const tl = gsap.timeline({
+    //     scrollTrigger: {
+    //       trigger: "#getstarted",
+    //       start: "top 70%",
+    //       end: "140% bottom",
+    //       scrub: 1.1,
+    //       // markers: trueo
+    //     },
+    //   });
 
-      tl.fromTo(
-        ".get_started_title .char",
-        { y: "100%", opacity: 0 },
-        { y: "0", opacity: 1, stagger: { amount: 1 }, ease: "power1.inout" }
-      );
+    //   tl.fromTo(
+    //     ".get_started_title .char",
+    //     { y: "100%", opacity: 0 },
+    //     { y: "0", opacity: 1, stagger: { amount: 1 }, ease: "power1.inout" }
+    //   );
 
-      tl.fromTo(
-        ".card_get_started",
-        { opacity: 0, x: (index) => (index % 2 === 0 ? "100%" : "-100%") },
-        { x: "0", opacity: 1, stagger: 0.3, ease: "power1.out" },
-        "<"
-      );
-    }
+    //   tl.fromTo(
+    //     ".card_get_started",
+    //     { opacity: 0, x: (index) => (index % 2 === 0 ? "100%" : "-100%") },
+    //     { x: "0", opacity: 1, stagger: 0.3, ease: "power1.out" },
+    //     "<"
+    //   );
+    // }
   }, [getStarted.current]);
 
   return (

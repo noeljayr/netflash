@@ -18,61 +18,55 @@ const WhyChooseUs = () => {
   const getStarted = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    if (window.innerWidth >= 540) {
-      gsap.registerPlugin(ScrollTrigger);
-      const title = new SplitType("#aboutus .why_choose_title", {
-        types: "words, chars",
-      });
-
-      const paragraph = new SplitType("#aboutus .why_choose_paragraph", {
-        types: "words, chars",
-      });
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#aboutus",
-          start: "top 70%",
-          end: "100% bottom",
-          scrub: 1.1,
-        },
-      });
-
-      tl.fromTo(
-        ".why_choose_title .char",
-        { y: "100%", opacity: 0 },
-        { y: "0", opacity: 1, stagger: { amount: 1 }, ease: "power1.inout" }
-      );
-
-      tl.fromTo(
-        ".why_choose_paragraph .char",
-        { y: "100%", opacity: 0 },
-        {
-          y: "0",
-          opacity: 1,
-          stagger: { amount: 1 },
-          ease: "power1.inout",
-        },
-        "<"
-      );
-
-      tl.fromTo(
-        ".aboutus_list",
-        { opacity: 0, scale: 0.5 },
-        {
-          opacity: 1,
-          scale: 1,
-          stagger: { amount: 1 },
-          ease: "power1.inout",
-        }
-      );
-
-      tl.fromTo(
-        ".sapn_why_choose",
-        { y: "100%", opacity: 0 },
-        { y: "0", opacity: 1, ease: "power1.inout" },
-        "<.3"
-      );
-    }
+    // if (window.innerWidth >= 540) {
+    //   gsap.registerPlugin(ScrollTrigger);
+    //   const title = new SplitType("#aboutus .why_choose_title", {
+    //     types: "words, chars",
+    //   });
+    //   const paragraph = new SplitType("#aboutus .why_choose_paragraph", {
+    //     types: "words, chars",
+    //   });
+    //   const tl = gsap.timeline({
+    //     scrollTrigger: {
+    //       trigger: "#aboutus",
+    //       start: "top 70%",
+    //       end: "100% bottom",
+    //       scrub: 1.1,
+    //     },
+    //   });
+    //   tl.fromTo(
+    //     ".why_choose_title .char",
+    //     { y: "100%", opacity: 0 },
+    //     { y: "0", opacity: 1, stagger: { amount: 1 }, ease: "power1.inout" }
+    //   );
+    //   tl.fromTo(
+    //     ".why_choose_paragraph .char",
+    //     { y: "100%", opacity: 0 },
+    //     {
+    //       y: "0",
+    //       opacity: 1,
+    //       stagger: { amount: 1 },
+    //       ease: "power1.inout",
+    //     },
+    //     "<"
+    //   );
+    //   tl.fromTo(
+    //     ".aboutus_list",
+    //     { opacity: 0, scale: 0.5 },
+    //     {
+    //       opacity: 1,
+    //       scale: 1,
+    //       stagger: { amount: 1 },
+    //       ease: "power1.inout",
+    //     }
+    //   );
+    //   tl.fromTo(
+    //     ".sapn_why_choose",
+    //     { y: "100%", opacity: 0 },
+    //     { y: "0", opacity: 1, ease: "power1.inout" },
+    //     "<.3"
+    //   );
+    // }
   }, [getStarted.current]);
   return (
     <section
