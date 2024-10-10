@@ -18,56 +18,78 @@ const WhyChooseUs = () => {
   const getStarted = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    // if (window.innerWidth >= 540) {
-    //   gsap.registerPlugin(ScrollTrigger);
-    //   const title = new SplitType("#aboutus .why_choose_title", {
-    //     types: "words, chars",
-    //   });
-    //   const paragraph = new SplitType("#aboutus .why_choose_paragraph", {
-    //     types: "words, chars",
-    //   });
-    //   const tl = gsap.timeline({
-    //     scrollTrigger: {
-    //       trigger: "#aboutus",
-    //       start: "top 70%",
-    //       end: "100% bottom",
-    //       scrub: 1.1,
-    //     },
-    //   });
-    //   tl.fromTo(
-    //     ".why_choose_title .char",
-    //     { y: "100%", opacity: 0 },
-    //     { y: "0", opacity: 1, stagger: { amount: 1 }, ease: "power1.inout" }
-    //   );
-    //   tl.fromTo(
-    //     ".why_choose_paragraph .char",
-    //     { y: "100%", opacity: 0 },
-    //     {
-    //       y: "0",
-    //       opacity: 1,
-    //       stagger: { amount: 1 },
-    //       ease: "power1.inout",
-    //     },
-    //     "<"
-    //   );
-    //   tl.fromTo(
-    //     ".aboutus_list",
-    //     { opacity: 0, scale: 0.5 },
-    //     {
-    //       opacity: 1,
-    //       scale: 1,
-    //       stagger: { amount: 1 },
-    //       ease: "power1.inout",
-    //     }
-    //   );
-    //   tl.fromTo(
-    //     ".sapn_why_choose",
-    //     { y: "100%", opacity: 0 },
-    //     { y: "0", opacity: 1, ease: "power1.inout" },
-    //     "<.3"
-    //   );
-    // }
+    const isMobile = window.innerWidth < 540;
+    
+    gsap.registerPlugin(ScrollTrigger);
+    
+    const title = new SplitType("#aboutus .why_choose_title", {
+      types: "words, chars",
+    });
+    
+    const paragraph = new SplitType("#aboutus .why_choose_paragraph", {
+      types: "words, chars",
+    });
+    
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#aboutus",
+        start: isMobile ? "top 90%" : "top 70%",  // Adjusted for mobile
+        end: isMobile ? "80% bottom" : "100% bottom",  // Adjusted for mobile
+        scrub: isMobile ? 0.5 : 1.1,  // Reduced scrub for smoother mobile experience
+      },
+    });
+  
+    // Title Animation
+    tl.fromTo(
+      ".why_choose_title .char",
+      { y: "100%", opacity: 0 },
+      {
+        y: "0",
+        opacity: 1,
+        stagger: { amount: isMobile ? 0.6 : 1 },  // Faster stagger on mobile
+        ease: "power1.inout"
+      }
+    );
+  
+    // Paragraph Animation
+    tl.fromTo(
+      ".why_choose_paragraph .char",
+      { y: "100%", opacity: 0 },
+      {
+        y: "0",
+        opacity: 1,
+        stagger: { amount: isMobile ? 0.6 : 1 },  // Faster stagger on mobile
+        ease: "power1.inout"
+      },
+      "<"  // Start at the same time as the title animation
+    );
+  
+    // About Us List Animation
+    tl.fromTo(
+      ".aboutus_list",
+      { opacity: 0, scale: 0.5 },
+      {
+        opacity: 1,
+        scale: 1,
+        stagger: { amount: isMobile ? 0.5 : 1 },  // Faster stagger on mobile
+        ease: "power1.inout"
+      }
+    );
+  
+    // Span Why Choose Animation
+    tl.fromTo(
+      ".sapn_why_choose",
+      { y: "100%", opacity: 0 },
+      {
+        y: "0",
+        opacity: 1,
+        ease: "power1.inout"
+      },
+      "<.3"
+    );
   }, [getStarted.current]);
+
+  
   return (
     <section
       ref={getStarted}

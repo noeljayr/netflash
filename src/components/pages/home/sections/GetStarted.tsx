@@ -40,35 +40,46 @@ const GetStarted = () => {
   const getStarted = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    // if (window.innerWidth >= 540) {
-    //   gsap.registerPlugin(ScrollTrigger);
-    //   const title = new SplitType("#getstarted .get_started_title", {
-    //     types: "words, chars",
-    //   });
+    gsap.registerPlugin(ScrollTrigger);
 
-    //   const tl = gsap.timeline({
-    //     scrollTrigger: {
-    //       trigger: "#getstarted",
-    //       start: "top 70%",
-    //       end: "140% bottom",
-    //       scrub: 1.1,
-    //       // markers: trueo
-    //     },
-    //   });
+    // Set breakpoints for mobile and desktop
+    const isMobile = window.innerWidth < 540;
 
-    //   tl.fromTo(
-    //     ".get_started_title .char",
-    //     { y: "100%", opacity: 0 },
-    //     { y: "0", opacity: 1, stagger: { amount: 1 }, ease: "power1.inout" }
-    //   );
+    // Split text into chars for animation
+    const title = new SplitType("#getstarted .get_started_title", {
+      types: "words, chars",
+    });
 
-    //   tl.fromTo(
-    //     ".card_get_started",
-    //     { opacity: 0, x: (index) => (index % 2 === 0 ? "100%" : "-100%") },
-    //     { x: "0", opacity: 1, stagger: 0.3, ease: "power1.out" },
-    //     "<"
-    //   );
-    // }
+    // Create a timeline for animations
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#getstarted",
+        start: isMobile ? "top 90%" : "top 70%", // More aggressive on mobile
+        end: isMobile ? "bottom top" : "140% bottom", // Adjust end point for mobile
+        scrub: 1.1,
+        // markers: true, // Uncomment for debugging
+      },
+    });
+
+    // Animate the title chars
+    tl.fromTo(
+      ".get_started_title .char",
+      { y: "100%", opacity: 0 },
+      {
+        y: "0",
+        opacity: 1,
+        stagger: { amount: isMobile ? 0.5 : 1 },
+        ease: "power1.inout",
+      }
+    );
+
+    // Animate the cards with stagger
+    tl.fromTo(
+      ".card_get_started",
+      { opacity: 0, x: (index) => (index % 2 === 0 ? "100%" : "-100%") },
+      { x: "0", opacity: 1, stagger: isMobile ? 0.2 : 0.3, ease: "power1.out" },
+      "<"
+    );
   }, [getStarted.current]);
 
   return (
