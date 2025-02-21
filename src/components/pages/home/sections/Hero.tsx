@@ -4,9 +4,11 @@ import gsap from "gsap";
 import { design, dev, host } from "../../../../assets";
 import { Button, DialogWrapper, HomeSvgShape } from "../../../ui";
 import { useTranslation } from "react-i18next";
+import useLanguageStore from "../../../../context/languageStore";
 
 const Hero = () => {
   const [translate, i18n] = useTranslation("global");
+  const { language } = useLanguageStore();
 
   const swiperRef = useRef() as MutableRefObject<HTMLDivElement>;
   const ref1 = useRef<HTMLParagraphElement>(null);
@@ -46,17 +48,17 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="
+      className={`
         hero_section
         container
-
+        ${language === "ger" ? "german" : ""}
         pb-[4rem]
         px-[1rem]
         xm:px-[1.5rem]
         zm:px-[2rem]
         sm:px-[2rem]
         xl:px-0
-        "
+        `}
     >
       <div
         className="
@@ -82,35 +84,9 @@ const Hero = () => {
             className="
               title
               font-mainFont
-              z-2
-
-              text-[2.5rem]
-              xm:text-[3rem]
-              ym:text-[3.6rem]
-              zm:text-[4.05rem]
-              sm:text-[5rem]
-              xd:text-[6rem]
-              md:text-[5rem]
-              xg:text-[6rem]
-              lg:text-[6.5rem]
-
-              leading-[2.5rem]
-              xm:leading-[2.7rem]
-              ym:leading-[3.2rem]
-              zm:leading-[3.7rem]
-              sm:leading-[4.2rem]
-              xd:leading-[5rem]
-              md:leading-[4.3rem]
-              xg:leading-[5rem]
-              lg:leading-[6rem]
-
-              mb-[1rem]
-              xm:mb-[2rem]
-              md:mb-6
-              lg:mb-[1.5rem]
-              
-            hidden
-md:grid
+              z-2   
+              hidden
+              md:grid
 
             "
           >

@@ -37,7 +37,7 @@ const Contact = () => {
       <section className="grid gap-3">
         <h1 className="grid text-[5rem]">
           <span>Netflash</span>
-          <span>Impressum</span>
+          <span>{translate("footer.text1")}</span>
         </h1>
         <p className="max-w-[1138px] mx-auto">{translate("contact.p")}</p>
       </section>

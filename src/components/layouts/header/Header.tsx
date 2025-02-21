@@ -9,8 +9,6 @@ import { useTranslation } from "react-i18next";
 const Header = () => {
   const [translate, i18n] = useTranslation("global");
 
- 
-
   const [menu, setMenu] = useState<boolean>(false);
   const location = useLocation();
   console.log(location.pathname);
@@ -132,14 +130,15 @@ const Header = () => {
               </NavLink>
             )}
 
-            
             <NavLink
-                onClick={() => {
-                  document.body.classList.remove("overflow-hidden");
-                  setMenu(false);
-                }}
-                to="/contact"
-                className="
+              onClick={() => {
+                document.body.classList.remove("overflow-hidden");
+                setMenu(false);
+              }}
+              target="_blank"
+              referrerPolicy="no-referrer"
+              to="mailto:contact@netflash.ch"
+              className="
                 md:bg-[#3e60c1ba]
                 md:hover:bg-[#3E60C1]
                 md:text-white
@@ -151,9 +150,9 @@ const Header = () => {
                 place-self-center
                 rounded-full
               "
-              >
-                {translate("header.contact")}
-              </NavLink>
+            >
+              {translate("header.contact")}
+            </NavLink>
           </div>
         </div>
 

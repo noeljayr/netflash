@@ -28,7 +28,7 @@
   },
   "projects": {
     "show_more": "Show More",
-    "view": "View",
+    "view": "Visit",
     "category": "Categories",
     "read_more": "Read More",
     "our_proj": "Our Projects"
@@ -92,7 +92,7 @@
   "footer": {
     "outro": "Personalized software-",
     "outro2": "and multimedia solutions.",
-    "text1": "Impressum",
+    "text1": "Imprint",
     "text2": "Privacy Policy",
     "text3": "Other brands",
     "contact": "Contact Us"

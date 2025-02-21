@@ -20,7 +20,7 @@ export const card = [
 
 export const mainNavigationLinkText = [
   { title: "Home", href: "" },
-  { title: "Portofolio", href: "portofolio" },
+  { title: "Portfolio", href: "portfolio" },
   { title: "About us", href: "aboutus" },
 ];
 
@@ -34,58 +34,26 @@ export const filterButtonsData = [
 export const cardsData = [
   {
     img: proj1,
-    titel: "Vispro : Elevate your brands with expert ",
+    titel: "Immediate Response Unit",
     category: ["Design", "Hosting"],
     price: 90,
     data: 2,
+    link: "https://www.immediateresponseunit.com/",
   },
   {
     img: proj2,
-    titel: "Vispro : Elevate your brands with expert ",
+    titel: "Smart Brain Studies",
     category: ["Development", "Design", "Hosting"],
     price: 90,
     data: 3,
+    link: "https://smartbrainstudies.vercel.app/",
   },
   {
     img: proj3,
-    titel: "Vispro : Elevate your brands with expert ",
+    titel: "Makoko Children Foundation",
     category: ["Design", "Hosting"],
     price: 90,
     data: 3,
-  },
-  {
-    img: proj4,
-    titel: "Vispro : Elevate your brands with expert ",
-    category: ["Design", "Development"],
-    price: 90,
-    data: 3,
-  },
-  {
-    img: proj2,
-    titel: "Vispro : Elevate your brands with expert ",
-    category: ["Design", "Hosting"],
-    price: 90,
-    data: 3,
-  },
-  {
-    img: proj3,
-    titel: "Vispro : Elevate your brands with expert ",
-    category: ["Hosting"],
-    price: 90,
-    data: 3,
-  },
-  {
-    img: proj1,
-    titel: "Vispro : Elevate your brands with expert ",
-    category: ["Hosting", "Development"],
-    price: 90,
-    data: 3,
-  },
-  {
-    img: proj4,
-    titel: "Vispro : Elevate your brands with expert ",
-    category: ["Hosting"],
-    price: 90,
-    data: 3,
+    link: "mcdf.ng",
   },
 ];

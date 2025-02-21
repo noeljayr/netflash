@@ -10,27 +10,19 @@ const GetStarted = () => {
   const [translate, i18n] = useTranslation("global");
 
   const data = [
-    { name: "Gian Iglowstein", position: "CEO", profile: prof1 },
-    {
-      name: "Martin Muloleni",
-      position: "Office Manager",
-      profile: prof6,
-    },
+    ,
     {
       name: "Taiwo Emanuel Jolomi",
       position: "Developer",
       profile: prof2,
     },
+    { name: "Gian Iglowstein", position: "CEO", profile: prof1 },
     {
       name: "Noel Luhanga",
       position: "UI Designer",
       profile: prof3,
     },
-    {
-      name: "Comfort Jaden Khonje",
-      position: "UI Designer",
-      profile: prof4,
-    },
+
     {
       name: "Robin Stambach",
       position: "CFO",
@@ -123,44 +115,21 @@ const GetStarted = () => {
         return (
           <div
             className={`
-                card_get_started
-                flex
-                items-center
-                border-[#ffffff14]
-                bg-[#141417]
-                rounded-full
-                absolute
-                scale-[.6]
-                xm:scale-[.75]
-                xd:scale-[.95]
-                lg:scale-[1.2]
-                w-[fit-content]
-                
-                ${
-                  index === 0 &&
-                  "top-[20%]  left-[0%]  lg:top-[32%] ym:top-[20%] ym:left-[5%]  lg:left-[5%] "
-                }
-                ${
-                  index === 1 &&
-                  "top-[5%] right-[-5%] ym:top-[5%] ym:right-[5%]  lg:top-[80%] lg:left-[22%]"
-                }
-                ${
-                  index === 2 &&
-                  "top-[-10%] left-[0%] ym:top-[-10%] ym:left-[5%]  sm:left-[25%] lg:top-[-5%] lg:left-[32%]"
-                }
-                ${
-                  index === 3 &&
-                  "top-[60%] right-[-5%] ym:top-[60%] ym:right-[5%] lg:top-[102%] lg:left-[50%]"
-                }
-                ${
-                  index === 4 &&
-                  "top-[74%] left-[-5%] ym:top-[74%] ym:left-[5%] lg:top-[60%] lg:left-[auto] lg:right-[5%] "
-                }
-                ${
-                  index === 5 &&
-                  "top-[89%] right-[-5%] ym:top-[89%] ym:right-[5%] sm:right-[22%] lg:top-[8%] lg:right-[20%]"
-                }
-              `}
+  card_get_started
+  flex
+  items-center
+  border-[#ffffff14]
+  bg-[#141417]
+  rounded-full
+  absolute
+  scale-[.6]
+  xm:scale-[.75]
+  xd:scale-[.95]
+  lg:scale-[1.2]
+  w-[fit-content]
+  ${index % 2 === 0 ? "left-[5%]" : "right-[5%]"}
+  ${index < 2 ? "bottom-[10%]" : index < 4 ? "top-[10%]" : "bottom-[10%]"}
+`}
           >
             <picture>
               <img
@@ -171,7 +140,7 @@ const GetStarted = () => {
                 alt=""
               />
             </picture>
-            <div className=" xm:text-[.7rem] md:text-[1rem] rounded-[.7rem] md:h-[75px] xm:h-[50px] xm:w-[200px] md:w-[250px] grid text-start py-[.7rem] px-[1rem]">
+            <div className="xm:text-[.7rem] md:text-[1rem] rounded-[.7rem] md:h-[75px] xm:h-[50px] xm:w-[200px] md:w-[250px] grid text-start py-[.7rem] px-[1rem]">
               <h5>{item.name}</h5>
               <p className="text-[#176BB9]">{item.position}</p>
             </div>

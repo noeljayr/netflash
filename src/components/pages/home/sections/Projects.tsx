@@ -4,7 +4,7 @@ import { cardsData, filterButtonsData as options } from "../../../../constants";
 import useProjectsAnimation from "../../../../hooks/useProjectAnimation";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
-import { ArrowRight, ArrowRightIcon } from "lucide-react";
+import { ArrowRightIcon } from "lucide-react";
 import { Button } from "../../../ui";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -47,7 +47,7 @@ const Projects = () => {
 
   return (
     <section
-      id="portofolio"
+      id="portfolio"
       className="
         projects__section
         xl:py-[10rem]
@@ -93,7 +93,7 @@ const Projects = () => {
                 xl:text-6xl
               "
             >
-              Portfolio
+              Recent Projects
             </h2>
           </div>
           <ul
@@ -106,17 +106,7 @@ const Projects = () => {
             "
             ref={filterWrapperRef}
           >
-            <div className="w-[86vw] max-w-[450px]">
-              <Select
-                onChange={setSelectedOption}
-                options={options}
-                closeMenuOnSelect={false}
-                components={animatedComponents}
-                defaultValue={[]}
-                isMulti
-                styles={customStyles}
-              />
-            </div>
+            <div className="w-[86vw] max-w-[450px]"></div>
           </ul>
         </div>
 
@@ -135,159 +125,51 @@ const Projects = () => {
               return (
                 isShown &&
                 currentShownCard >= index && (
-                  <li
+                  <div
                     data-value={card.category}
                     onClick={() =>
                       route(`/project/${card.titel}`, { state: card })
                     }
-                    className="
-                    rounded-[.5rem]
-                    overflow-hidden
-                    bg-[#111116]
-                    border
-                    border-white/10
-                    text-center
-                    h-[550px]
-                    grid
-                  "
+                    className="project-card relative"
                     key={index}
                   >
                     <img
                       className="
-                      img__wrapper
-                      md:h-[100%]
-                      w-[100%]
-                      xl:h-[100%]
-                      max-h-[350px]
-                      object-fill
+                     
                     "
                       src={card.img}
                       aria-roledescription="click on this img to show the project page info"
                       loading="lazy"
-                      draggable={false}
                       alt="project picutre"
                     />
-                    <div
-                      className="
-                      grid
-                      gap-2
-                      pt-3
-                      pb-4
-                      px-2
-                      sm:px-4
-                      sm:pt-4
-                      md:px-2
-                      md:pt-2
-                      lg:px-3
-                      lg:pt-4
-                      xl:px-3
-                      xl:pt-8
-                    "
+
+                    <a
+                      href={card.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-overlay absolute flex gap-1"
                     >
-                      <div className="flex items-start justify-between mb-2">
-                        <h3
-                          className="
-                          card-title
-                        text-[.9rem]
-                        ym:text-[1rem]
-                        sm:text-[1.3rem]
-                        xd:text-[1.1rem]
-                        lg:text-[1rem]
-                        pb-2
-                        text-start
-                        
-                      "
+                      <span className="font-medium">{card.titel}</span>
+                      <span className="icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="#fff"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          className="icon icon-tabler icons-tabler-outline icon-tabler-arrow-up-right"
                         >
-                          {card.titel}
-                        </h3>
-                        <Button
-                          variant="default"
-                          className=" mt-0 bg-[#29292D]"
-                        >
-                          {translate("projects.view")}
-                        </Button>
-                      </div>
-                      <div>
-                        <p className="text-[.8rem] text-start">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Sed, quaerat beatae! Nisi incidunt enim
-                          recusandae aut.
-                        </p>
-                      </div>
-                      <div
-                        className="
-                        flex
-                    
-                        gap-2
-                        items-center
-                        justify-between
-                      "
-                      >
-                        <ul
-                          className="
-                        flex
-                        flex-wrap
-                        items-center
-                        gap-2
-                        lg:gap-2
-                        xl:gap-4
-                      "
-                        >
-                          <span className="text-[.8rem]">
-                            {translate("projects.category")}:
-                          </span>
-
-                          {card.category.map((item, index) => {
-                            return (
-                              <Button
-                                variant={"link"}
-                                key={index}
-                                className="
-                              text-[.4rem]
-                              xm:text-[.53rem]
-                              ym:text-[.7rem]
-                              sm:text-[.9rem]
-                              xd:text-[.5rem]
-                              xg:text-[.7rem]
-                              italic
-                              text-[#C4C4DF]
-                              min-[1023px]:text-[.55rem]
-                              min-[1150px]:text-[.7rem]
-                              xl:text-[.8rem]
-                              3xl:text-[1.2rem]
-                              w-fit
-                              p-0
-                            "
-                              >
-                                {item}
-                              </Button>
-                            );
-                          })}
-                        </ul>
-                        <Button
-                          className="
-                          w-fit
-                          text-[.8rem]
-                          h-[20px]
-                          sm:text-[1.2rem]
-                          md:text-[1.1rem]
-                          lg:text-[.85rem]
-                          xl:text-xl
-                          xd:text-[1rem]
-                      
-                          p-0
-
-                          text-[#4363C1]
-                          
-                        "
-                          variant={"link"}
-                        >
-                          {translate("projects.read_more")}
-                          <ArrowRightIcon className="w-4 h-4 ml-2" />
-                        </Button>
-                      </div>
-                    </div>
-                  </li>
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                          <path d="M17 7l-10 10" />
+                          <path d="M8 7l9 0l0 9" />
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
                 )
               );
             })}
