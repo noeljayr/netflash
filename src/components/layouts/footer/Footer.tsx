@@ -31,7 +31,7 @@ const Footer = () => {
       tl.fromTo(
         ".footer",
         {
-          opacity: 0,
+          opacity: 1,
         },
         {
           opacity: 1,
