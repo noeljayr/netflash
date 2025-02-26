@@ -1,7 +1,8 @@
 import { logo, socail1, socail2, socail3, socail4 } from "../../../assets";
 import { gsap, ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
-import { Button, Link } from "../../ui";
+import { Button } from "../../ui";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const linkSyle = `
@@ -84,7 +85,7 @@ const Footer = () => {
         {data.map((item, index) => {
           return (
             <li key={index}>
-              <Link href="#home">
+              <Link to="#home">
                 <img
                   className="
                           w-[2.1rem]
@@ -114,7 +115,7 @@ const Footer = () => {
                 "
       >
         <li className="flex">
-          <Link href="/imprint" className={linkSyle}>
+          <Link to="/imprint" className={linkSyle}>
             {translate("footer.text1")}
           </Link>
         </li>
@@ -123,7 +124,7 @@ const Footer = () => {
           <Link
             target="_blank"
             referrerPolicy="no-referrer"
-            href="mailto:contact@netflash.ch"
+            to="mailto:contact@netflash.ch"
             className="ct-btn inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground hover:bg-primary/90 h-10 px-8 py-2 bg-[#3355b4] place-self-center"
           >
             {translate("footer.contact")}
