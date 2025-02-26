@@ -13,11 +13,11 @@ function Language() {
 
     if (body) {
       body.style.transition = "opacity .25s ease-in-out";
-      body.style.opacity = "0.25";
+      body.style.opacity = "0";
 
       const timer = setTimeout(() => {
         body.style.opacity = "1";
-      }, 250);
+      }, 1000);
 
       return () => clearTimeout(timer);
     }
