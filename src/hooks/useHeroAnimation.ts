@@ -28,7 +28,6 @@ const useHeroAnimation = ({ swiperRef }: HeroSectionAnimationProps) => {
           ".5"
         );
         tl.to(".home_shape", { y: "0", opacity: 1, duration: 1 }, "<.1");
-        tl.to(".card0", { x: "0", opacity: 1, scale: 1 }, "<.1");
 
         tl.to(
           ".paragraph .word",

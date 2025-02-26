@@ -22,11 +22,11 @@ const WhyChooseUs = () => {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    const title = new SplitType("#aboutus .why_choose_title", {
+    const title = new SplitType("#aboutus #why_choose_title", {
       types: "words, chars",
     });
 
-    const paragraph = new SplitType("#aboutus .why_choose_paragraph", {
+    const paragraph = new SplitType("#aboutus #why_choose_paragraph", {
       types: "words, chars",
     });
 
@@ -41,7 +41,7 @@ const WhyChooseUs = () => {
 
     // Title Animation
     tl.fromTo(
-      ".why_choose_title .char",
+      "#why_choose_title .char",
       { y: "100%", opacity: 0 },
       {
         y: "0",
@@ -53,7 +53,7 @@ const WhyChooseUs = () => {
 
     // Paragraph Animation
     tl.fromTo(
-      ".why_choose_paragraph .char",
+      "#why_choose_paragraph",
       { y: "100%", opacity: 0 },
       {
         y: "0",
@@ -144,11 +144,10 @@ const WhyChooseUs = () => {
             {translate("why_us.title")}
           </span>
           <h2
-            className="
-        why_choose_title
+            id="why_choose_title"
+            className="why_choose_title
               font-meduim
-              italic  
-              
+              italic
               text-[1.4rem]
               md:text-[3rem]
               md:leading-[3.3rem]
@@ -157,8 +156,8 @@ const WhyChooseUs = () => {
             {translate("why_us.h2")}
           </h2>
           <p
-            className="
-              why_choose_paragraph
+            id="why_choose_paragraph"
+            className="why_choose_paragraph
               text-[.9rem]
               md:text-[1.3rem]
               max-w-[670px]

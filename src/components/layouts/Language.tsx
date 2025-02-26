@@ -1,12 +1,26 @@
 import { useTranslation } from "react-i18next";
 import en from "../../assets/imgs/en.png";
 import ger from "../../assets/imgs/ger.png";
+import { useEffect } from "react";
 
 function Language() {
   const [translate, i18n] = useTranslation("global");
   const handleChangeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
     localStorage.setItem("language", lang);
+
+    const body = document.querySelector("body") as HTMLBodyElement;
+
+    if (body) {
+      body.style.transition = "opacity .25s ease-in-out";
+      body.style.opacity = "0.25";
+
+      const timer = setTimeout(() => {
+        body.style.opacity = "1";
+      }, 250);
+
+      return () => clearTimeout(timer);
+    }
   };
 
   return (
@@ -27,8 +41,8 @@ function Language() {
         }`}
         onClick={() => handleChangeLanguage("en")}
       >
-         <img src={en} alt="en" />
-         <span>EN</span>
+        <img src={en} alt="en" />
+        <span>EN</span>
       </button>
     </div>
   );

@@ -302,7 +302,7 @@ const Hero = () => {
             <Button
               variant={"ghost"}
               onClick={(e) => hoverHandler(ref2, e)}
-              className="button-home "
+              className="button-home"
             >
               <img src={dev} alt="icon img" aria-label="hidden" />
               <span> Development </span>

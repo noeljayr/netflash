@@ -316,3 +316,11 @@ nav {
 nav img {
   height: 2.35rem;
 }
+
+.button-home:hover {
+  background-color: rgba(62, 96, 193, 0.25);
+}
+
+.button-home:hover span {
+  color: #c4c4df;
+}

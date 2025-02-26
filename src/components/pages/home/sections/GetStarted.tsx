@@ -86,7 +86,7 @@ const GetStarted = () => {
         sm:px-[3rem]
         py-[10rem]
         xl:px-0
-        my-[10rem]
+        my-[8rem]
       "
     >
       <div
@@ -111,29 +111,33 @@ const GetStarted = () => {
         </h2>
       </div>
       {data.map((item, index) => {
+        // Determine if the item is at the top based on your conditions:
+        const isTop = index >= 2 && index < 4; // Adjust as needed
         return (
           <div
+            key={index}
             className={`
-  card_get_started
-  flex
-  items-center
-  border-[#ffffff14]
-  bg-[#141417]
-  rounded-full
-  absolute
-  scale-[.6]
-  xm:scale-[.75]
-  xd:scale-[.95]
-  lg:scale-[1.2]
-  w-[fit-content]
-  ${index % 2 === 0 ? "left-[5%]" : "right-[5%]"}
-  ${index < 2 ? "bottom-[10%]" : index < 4 ? "top-[10%]" : "bottom-[10%]"}
-`}
+        card_get_started
+        flex
+        items-center
+        border-[#ffffff14]
+        bg-[#141417]
+        rounded-full
+        absolute
+        scale-[.6]
+        xm:scale-[.75]
+        xd:scale-[.95]
+        lg:scale-[1.2]
+        w-[fit-content]
+        ${index % 2 === 0 ? "left-[5%]" : "right-[5%]"}
+        ${index < 2 ? "bottom-[10%]" : index < 4 ? "top-[10%]" : "bottom-[10%]"}
+        ${isTop ? "animate-slideInTop" : "animate-slideInBottom"}
+      `}
           >
             <picture>
               <img
-                width={"75px"}
-                height={"75px"}
+                width="75px"
+                height="75px"
                 className="max-w-[75px] rounded-full"
                 src={item?.profile}
                 alt=""
