@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Footer, Header } from "./components/layouts";
 import { Home, Error, ProjectShow, Contact } from "./components/pages";
 import Language from "./components/layouts/Language";

@@ -22,7 +22,7 @@ const Header = () => {
           w-full
         "
     >
-      <NavLink
+      <RLink
         to="/"
         className="hover:text-[inherit] flex items-center logo gap-.5 "
       >
@@ -33,7 +33,7 @@ const Header = () => {
           alt="the logo of our agency"
         />
         <span className="ml-2 text-2xl">Netflash</span>
-      </NavLink>
+      </RLink>
 
       <div
         className={`
