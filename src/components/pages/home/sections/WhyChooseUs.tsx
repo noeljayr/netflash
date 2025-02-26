@@ -15,30 +15,30 @@ const WhyChooseUs = () => {
     translate("why_us.ADataCols.text4"),
   ];
 
-  const getStarted = useRef<HTMLDivElement>(null);
+  const aboutUs = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
     const isMobile = window.innerWidth < 540;
-    
+
     gsap.registerPlugin(ScrollTrigger);
-    
+
     const title = new SplitType("#aboutus .why_choose_title", {
       types: "words, chars",
     });
-    
+
     const paragraph = new SplitType("#aboutus .why_choose_paragraph", {
       types: "words, chars",
     });
-    
+
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#aboutus",
-        start: isMobile ? "top 90%" : "top 70%",  // Adjusted for mobile
-        end: isMobile ? "80% bottom" : "100% bottom",  // Adjusted for mobile
-        scrub: isMobile ? 0.5 : 1.1,  // Reduced scrub for smoother mobile experience
+        start: isMobile ? "top 90%" : "top 70%", // Adjusted for mobile
+        end: isMobile ? "80% bottom" : "100% bottom", // Adjusted for mobile
+        scrub: isMobile ? 0.5 : 1.1, // Reduced scrub for smoother mobile experience
       },
     });
-  
+
     // Title Animation
     tl.fromTo(
       ".why_choose_title .char",
@@ -46,11 +46,11 @@ const WhyChooseUs = () => {
       {
         y: "0",
         opacity: 1,
-        stagger: { amount: isMobile ? 0.6 : 1 },  // Faster stagger on mobile
-        ease: "power1.inout"
+        stagger: { amount: isMobile ? 0.6 : 1 }, // Faster stagger on mobile
+        ease: "power1.inout",
       }
     );
-  
+
     // Paragraph Animation
     tl.fromTo(
       ".why_choose_paragraph .char",
@@ -58,12 +58,12 @@ const WhyChooseUs = () => {
       {
         y: "0",
         opacity: 1,
-        stagger: { amount: isMobile ? 0.6 : 1 },  // Faster stagger on mobile
-        ease: "power1.inout"
+        stagger: { amount: isMobile ? 0.6 : 1 }, // Faster stagger on mobile
+        ease: "power1.inout",
       },
-      "<"  // Start at the same time as the title animation
+      "<" // Start at the same time as the title animation
     );
-  
+
     // About Us List Animation
     tl.fromTo(
       ".aboutus_list",
@@ -71,11 +71,11 @@ const WhyChooseUs = () => {
       {
         opacity: 1,
         scale: 1,
-        stagger: { amount: isMobile ? 0.5 : 1 },  // Faster stagger on mobile
-        ease: "power1.inout"
+        stagger: { amount: isMobile ? 0.5 : 1 }, // Faster stagger on mobile
+        ease: "power1.inout",
       }
     );
-  
+
     // Span Why Choose Animation
     tl.fromTo(
       ".sapn_why_choose",
@@ -83,21 +83,19 @@ const WhyChooseUs = () => {
       {
         y: "0",
         opacity: 1,
-        ease: "power1.inout"
+        ease: "power1.inout",
       },
       "<.3"
     );
-  }, [getStarted.current]);
+  }, [aboutUs.current]);
 
-  
   return (
     <section
-      ref={getStarted}
-      id="aboutus"
+      ref={aboutUs}
+      id="whyus"
       className="
         overflow-hidden
         why_choose
-        
       "
     >
       <div
@@ -117,9 +115,8 @@ const WhyChooseUs = () => {
         xm:px-[1.5rem]
         zm:px-[2rem]
         lg:px-[3rem]
-        xl:py-[10rem]
         xl:px-0
-        pt-[9rem] justify-items-center
+        justify-items-center
         "
       >
         <div
@@ -128,7 +125,7 @@ const WhyChooseUs = () => {
             items-center
             justify-center
             px-[1rem]
-            pt-[1rem]
+           
             pb-[3rem]
             md:pr-[2rem]
 

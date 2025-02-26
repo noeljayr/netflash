@@ -32,7 +32,9 @@
     "view": "Besuchen",
     "category": "Kategorien",
     "read_more": "Mehr lesen",
-    "our_proj": "Unsere Projekte"
+    "our_proj": "Unsere Projekte",
+    "recent": "Neueste Projekte",
+    "visit": "Website besuchen"
   },
   "why_us": {
     "title": "warum wir?",

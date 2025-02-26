@@ -4,7 +4,6 @@ import { cardsData, filterButtonsData as options } from "../../../../constants";
 import useProjectsAnimation from "../../../../hooks/useProjectAnimation";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
-import { ArrowRightIcon } from "lucide-react";
 import { Button } from "../../../ui";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -51,7 +50,7 @@ const Projects = () => {
       className="
         projects__section
         xl:py-[10rem]
-        pt-[6rem]
+        pt-[1rem]
         lg:px-[3rem]
         xl:px-0
         container
@@ -93,7 +92,7 @@ const Projects = () => {
                 xl:text-6xl
               "
             >
-              Recent Projects
+              {translate("projects.recent")}
             </h2>
           </div>
           <ul
@@ -102,7 +101,6 @@ const Projects = () => {
               items-center
               flex-wrap
               gap-[.5rem]
-
             "
             ref={filterWrapperRef}
           >
@@ -127,21 +125,20 @@ const Projects = () => {
                 currentShownCard >= index && (
                   <div
                     data-value={card.category}
-                    onClick={() =>
-                      route(`/project/${card.titel}`, { state: card })
-                    }
                     className="project-card relative"
                     key={index}
                   >
-                    <img
-                      className="
+                    <div className="project-image flex w-full h-full overflow-hidden">
+                      <img
+                        className="
                      
                     "
-                      src={card.img}
-                      aria-roledescription="click on this img to show the project page info"
-                      loading="lazy"
-                      alt="project picutre"
-                    />
+                        src={card.img}
+                        aria-roledescription="click on this img to show the project page info"
+                        loading="lazy"
+                        alt="project picutre"
+                      />
+                    </div>
 
                     <a
                       href={card.link}
@@ -150,7 +147,11 @@ const Projects = () => {
                       className="project-overlay absolute flex gap-1"
                     >
                       <span className="font-medium">{card.titel}</span>
-                      <span className="icon">
+
+                      <span className="icon relative">
+                        <span className="tooltip flex absolute p-2 items-center">
+                          {translate("projects.visit")}
+                        </span>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="24"

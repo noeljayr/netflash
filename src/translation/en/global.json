@@ -11,8 +11,8 @@
     "cta": "Get in Contact",
     "p1": "Elevate your digital presence globally with tailored website solutions for tech enthusiasts. At Netflash, we fuse creativity with code to craft online masterpieces.",
     "heroImageRef1": "Create stunning, user-friendly designs that make every click a joy.",
-    "heroImageRef2": "Bring your ideas to life with smooth, high-performing websites and apps.",
-    "heroImageRef3": " Keep your website fast, secure, and always online. With our worry-free hosting."
+    "heroImageRef3": "Bring your ideas to life with smooth, high-performing websites and apps.",
+    "heroImageRef2": " Keep your website fast, secure, and always online. With our worry-free hosting."
   },
   "contact_form": {
     "dialog_title": "Send us a message",
@@ -31,7 +31,9 @@
     "view": "Visit",
     "category": "Categories",
     "read_more": "Read More",
-    "our_proj": "Our Projects"
+    "our_proj": "Our Projects",
+    "recent" : "Recent Projects",
+    "visit": "Visit Website"
   },
   "why_us": {
     "title": "Why us?",

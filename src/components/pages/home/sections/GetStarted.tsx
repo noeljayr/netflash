@@ -29,7 +29,7 @@ const GetStarted = () => {
       profile: prof5,
     },
   ];
-  const getStarted = useRef<HTMLDivElement>(null);
+  const aboutUS = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -38,14 +38,14 @@ const GetStarted = () => {
     const isMobile = window.innerWidth < 540;
 
     // Split text into chars for animation
-    const title = new SplitType("#getstarted .get_started_title", {
+    const title = new SplitType("#aboutus .get_started_title", {
       types: "words, chars",
     });
 
     // Create a timeline for animations
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "#getstarted",
+        trigger: "#aboutus",
         start: isMobile ? "top 90%" : "top 70%", // More aggressive on mobile
         end: isMobile ? "bottom top" : "140% bottom", // Adjust end point for mobile
         scrub: 1.1,
@@ -72,11 +72,11 @@ const GetStarted = () => {
       { x: "0", opacity: 1, stagger: isMobile ? 0.2 : 0.3, ease: "power1.out" },
       "<"
     );
-  }, [getStarted.current]);
+  }, [aboutUS.current]);
 
   return (
     <section
-      id="getstarted"
+      id="aboutus"
       className="
         container
         relative
@@ -84,10 +84,9 @@ const GetStarted = () => {
         xm:px-[1.5rem]
         zm:px-[2rem]
         sm:px-[3rem]
-        xl:py-[10rem]
+        py-[10rem]
         xl:px-0
         my-[10rem]
-        py-[10rem]
       "
     >
       <div
@@ -136,13 +135,13 @@ const GetStarted = () => {
                 width={"75px"}
                 height={"75px"}
                 className="max-w-[75px] rounded-full"
-                src={item.profile}
+                src={item?.profile}
                 alt=""
               />
             </picture>
             <div className="xm:text-[.7rem] md:text-[1rem] rounded-[.7rem] md:h-[75px] xm:h-[50px] xm:w-[200px] md:w-[250px] grid text-start py-[.7rem] px-[1rem]">
-              <h5>{item.name}</h5>
-              <p className="text-[#176BB9]">{item.position}</p>
+              <h5>{item?.name}</h5>
+              <p className="text-[#176BB9]">{item?.position}</p>
             </div>
           </div>
         );

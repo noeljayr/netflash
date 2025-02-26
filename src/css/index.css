@@ -137,10 +137,6 @@ body {
   padding-left: 0.5rem;
 }
 
-.language-container button span {
-  display: none;
-}
-
 .language-container .active-language {
   background-color: rgba(62, 96, 193, 0.2); /* Example: green background */
   color: white;
@@ -148,17 +144,26 @@ body {
   border: 1px solid #3e60c1ba;
 }
 
-.language-container:hover span {
-  display: block;
+.language-container button span {
   color: #0e0e11;
+  position: absolute;
+  right: -0.5rem;
+  transform: translateX(0.25rem);
+  transition: ease 0.3s;
+  opacity: 0;
+}
+
+.language-container:hover span {
+  transform: translateX(0);
+  position: relative;
+  opacity: 1;
 }
 
 .project-card {
   background-color: rgb(41, 41, 41);
   border: 1px solid rgb(255, 255, 255, 0.1);
-  border-radius: 1rem;
   cursor: pointer;
-  overflow: hidden;
+  border-radius: 1rem;
 }
 
 .project-overlay {
@@ -167,27 +172,13 @@ body {
   padding: 1rem;
   background-color: rgb(255, 255, 255, 0.5);
   transition: ease 0.3s;
-  border-radius: 5rem;
+  border-radius: 1rem;
   opacity: 0;
-  overflow: hidden;
   height: 0.5rem;
   width: 0.5rem;
-}
-
-.project-card:hover .project-overlay {
   opacity: 1;
   height: 100%;
   width: 100%;
-  border-radius: 1rem;
-  backdrop-filter: blur(10px);
-}
-
-.project-overlay * {
-  color: #0e0e11;
-}
-
-.project-overlay span {
-  cursor: pointer;
 }
 
 .project-overlay .icon {
@@ -208,12 +199,59 @@ body {
   position: absolute;
 }
 
+.tooltip {
+  background-color: white;
+  width: 7.5rem;
+  font-size: 0.65rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  right: -2rem;
+  box-shadow:
+    0.7px 2.1px 4.1px rgba(0, 0, 0, 0.048),
+    2.5px 7.1px 13.8px rgba(0, 0, 0, 0.072),
+    11px 32px 62px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  top: 0rem;
+  transition: ease 0.2s;
+}
+.project-overlay .icon:hover .tooltip {
+  top: -2.25rem;
+  opacity: 1;
+  visibility: visible;
+}
+.project-card:hover .project-overlay {
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.project-overlay * {
+  color: #0e0e11;
+}
+
+.project-overlay span {
+  cursor: pointer;
+}
+
 .project-card img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   transform: scale(1.4);
+}
+
+.project-image {
+  border-radius: 1rem;
 }
 
 .imprint-page {
@@ -225,25 +263,59 @@ body {
   padding: 2rem;
 }
 
-
 @media not all and (min-width: 520px) {
- .footer{
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2rem;
+  }
+
+  .social-links {
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .cont {
+    justify-content: start;
+  }
+
+  .footer p {
+    width: 100%;
+    text-align: start;
+  }
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 12rem auto 12rem;
+  position: sticky;
+  gap: 0;
+  z-index: 10;
+  width: 100vw;
+  overflow: hidden;
+  padding-top: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.contact-btn {
+  height: 2.8rem;
   display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 2rem;
- }
+  align-items: center;
+  justify-content: center;
+}
 
- .social-links{
-  margin-left: 0;
-  margin-right: auto;
- }
- .cont{
-  justify-content: start;
- }
+@media not all and (min-width: 960px) {
+  .navlinks {
+    display: none;
+  }
+  .contact-btn{
+    display: none;
+  }
+  nav{
+    display: flex;
+  }
+}
 
- .footer p{
-  width: 100%;
-  text-align: start;
- }
+nav img {
+  height: 2.35rem;
 }

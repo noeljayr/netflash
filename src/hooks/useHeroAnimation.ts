@@ -30,14 +30,6 @@ const useHeroAnimation = ({ swiperRef }: HeroSectionAnimationProps) => {
         tl.to(".home_shape", { y: "0", opacity: 1, duration: 1 }, "<.1");
         tl.to(".card0", { x: "0", opacity: 1, scale: 1 }, "<.1");
 
-        if (innerWidth >= 940) {
-          tl.to(".card1", { x: "0", opacity: 1, scale: 0.9 }, "<.1");
-          tl.to(".card2", { x: "0", opacity: 1, scale: 0.9 }, "<.1");
-        } else {
-          tl.to(".card1", { x: "0", opacity: 1, scale: 1 }, "<.1");
-          tl.to(".card2", { x: "0", opacity: 1, scale: 1 }, "<.1");
-        }
-
         tl.to(
           ".paragraph .word",
           { y: "0", opacity: 1, stagger: { amount: 0.3 } },

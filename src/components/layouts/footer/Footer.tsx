@@ -54,7 +54,7 @@ const Footer = () => {
       <div className="grid items-start  gap-[2rem]">
         <div className="flex items-center gap-[.5rem]">
           <img src={logo} alt="" className="w-[4rem]" />
-          <h2 className="text-[1.9rem]">NetFlash</h2>
+          <h2 className="text-[1.9rem]">Netflash</h2>
         </div>
         <p
           className="
@@ -67,8 +67,8 @@ const Footer = () => {
               sm:text-start
             "
         >
-          © 2025 NetFlash
-          {translate("footer.outro")} {translate("footer.outro2")}
+          © 2025 Netflash {translate("footer.outro")}{" "}
+          {translate("footer.outro2")}{" "}
         </p>
       </div>
 

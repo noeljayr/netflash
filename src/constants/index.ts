@@ -22,6 +22,7 @@ export const mainNavigationLinkText = [
   { title: "Home", href: "" },
   { title: "Portfolio", href: "portfolio" },
   { title: "About us", href: "aboutus" },
+  { title: "Why us", href: "whyus" },
 ];
 
 export const filterButtonsData = [
@@ -54,6 +55,14 @@ export const cardsData = [
     category: ["Design", "Hosting"],
     price: 90,
     data: 3,
-    link: "mcdf.ng",
+    link: "https://mcdf.ng",
+  },
+  {
+    img: proj4,
+    titel: "Racket Service",
+    category: ["Design", "Hosting"],
+    price: 90,
+    data: 3,
+    link: "https://racket-service.ch/",
   },
 ];

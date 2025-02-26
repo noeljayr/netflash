@@ -278,10 +278,10 @@ const Hero = () => {
               <p className="shape tool-tip-1" ref={ref1}>
                 {translate("hero.heroImageRef1")}
               </p>
-              <p className="shape" ref={ref2}>
+              <p className="shape" ref={ref3}>
                 {translate("hero.heroImageRef2")}
               </p>
-              <p className="shape" ref={ref3}>
+              <p className="shape" ref={ref2}>
                 {translate("hero.heroImageRef3")}
               </p>
             </div>
