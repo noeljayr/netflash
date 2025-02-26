@@ -6,9 +6,6 @@ import { useEffect } from "react";
 function Language() {
   const [translate, i18n] = useTranslation("global");
   const handleChangeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-    localStorage.setItem("language", lang);
-
     const body = document.querySelector("body") as HTMLBodyElement;
 
     if (body) {
@@ -17,7 +14,9 @@ function Language() {
 
       const timer = setTimeout(() => {
         body.style.opacity = "1";
-      }, 2000);
+        i18n.changeLanguage(lang);
+        localStorage.setItem("language", lang);
+      }, 500);
 
       return () => clearTimeout(timer);
     }
