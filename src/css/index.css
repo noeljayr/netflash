@@ -176,9 +176,6 @@ body {
   opacity: 0;
   height: 0.5rem;
   width: 0.5rem;
-  opacity: 1;
-  height: 100%;
-  width: 100%;
 }
 
 .project-overlay .icon {
@@ -308,10 +305,10 @@ nav {
   .navlinks {
     display: none;
   }
-  .contact-btn{
+  .contact-btn {
     display: none;
   }
-  nav{
+  nav {
     display: flex;
   }
 }
