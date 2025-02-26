@@ -17,7 +17,7 @@ function Language() {
 
       const timer = setTimeout(() => {
         body.style.opacity = "1";
-      }, 1000);
+      }, 2000);
 
       return () => clearTimeout(timer);
     }
