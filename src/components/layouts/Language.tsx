@@ -5,17 +5,20 @@ import { useEffect } from "react";
 
 function Language() {
   const [translate, i18n] = useTranslation("global");
-  const handleChangeLanguage = (lang: string) => {
-    const body = document.querySelector("body") as HTMLBodyElement;
 
+  const handleChangeLanguage = (language: string) => {
+    // Return early if the language is already selected
+    if (i18n.language === language) return;
+
+    const body = document.querySelector("body") as HTMLBodyElement;
     if (body) {
       body.style.transition = "opacity .25s ease-in-out";
       body.style.opacity = "0";
 
       const timer = setTimeout(() => {
         body.style.opacity = "1";
-        i18n.changeLanguage(lang);
-        localStorage.setItem("language", lang);
+        i18n.changeLanguage(language);
+        localStorage.setItem("language", language);
       }, 500);
 
       return () => clearTimeout(timer);

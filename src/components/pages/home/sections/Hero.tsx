@@ -197,7 +197,7 @@ const Hero = () => {
                 icon=""
                 className={`
                   get_started
-                  bg-[#314a919e]
+                  bg-[#3e60c1]
                   hover:bg-[#334d99]
                   hover:text-[#fff]
                   md:text-white

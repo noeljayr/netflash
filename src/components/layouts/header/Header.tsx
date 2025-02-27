@@ -86,7 +86,7 @@ const Header = () => {
           referrerPolicy="no-referrer"
           to="mailto:contact@netflash.ch"
           className="
-                bg-[#3e60c1ba]
+                bg-[#3e60c1]
                 md:hover:bg-[#3E60C1]
                 md:text-white
                 md:px-[1.8rem]
