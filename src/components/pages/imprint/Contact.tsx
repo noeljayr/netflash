@@ -4,20 +4,12 @@ import { useTranslation } from "react-i18next";
 
 const contactPage = [
   {
-    name: "Address",
-    text: "Location, location 2",
-  },
-  {
     name: "Phone",
     text: "12354456787",
   },
   {
     name: "Email",
     text: "website@email.com",
-  },
-  {
-    name: "Managing director",
-    text: "Name of Director",
   },
   {
     name: "Commercial Register",
@@ -27,38 +19,43 @@ const contactPage = [
     name: "VAT Identitifcation Number",
     text: "313473159853",
   },
+  {
+    name: "Address",
+    text: "Location, location 2",
+  },
+  {
+    name: "Managing director",
+    text: "Name of Director",
+  },
 ];
 
 const Contact = () => {
   const [translate, i18n] = useTranslation("global");
 
   return (
-    <main className="grid gap-[3rem] container text-center place-content-center mb-[6rem]">
-      <section className="grid gap-3">
-        <h1 className="grid text-[5rem]">
+    <main className=" gap-[1.5rem] imprint-page text-center place-content-center mb-[6rem]">
+      <section className="flex flex-col items-center gap-3">
+        <h1 className="flex gap-2 Items-center justify-center text-[2rem]">
           <span>Netflash</span>
           <span>{translate("footer.text1")}</span>
         </h1>
-        <p className="max-w-[1138px] mx-auto">{translate("contact.p")}</p>
+        <p className="mx-auto">{translate("contact.p")}</p>
       </section>
 
-      <section>
-        <ul className="grid gap-3 grid-cols-1 xd:grid-cols-2 md:grid-cols-3 p-3 py-11 bg-[#111116] border border-zinc-800">
+    
+        <div className="contact-info gap-3 grid-cols-2 w-full">
           {contactPage.map((item) => {
             return (
-              <li
+              <div
                 key={item.name}
-                className="grid gap-3 items-center text-[1.3rem] justify-center p-3"
+                className="flex flex-col gap-2 p-4"
               >
-                <span className="bg-[#0E0E11] p-2 border-2 border-zinc-800 px-6">
-                  {item.name}
-                </span>
-                <span>{item.text}</span>
-              </li>
+                <span className="title font-medium">{item.name}</span>
+                <span className="opacity-60">{item.text}</span>
+              </div>
             );
           })}
-        </ul>
-      </section>
+        </div>
     </main>
   );
 };
