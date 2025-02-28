@@ -190,6 +190,7 @@ body {
   position: absolute;
   white-space: nowrap;
   opacity: 0;
+  
   transition: ease 0.3s;
   left: 1rem;
 }
