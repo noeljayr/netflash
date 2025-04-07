@@ -192,7 +192,7 @@ const Projects = () => {
           </div>
           {cardsData.length > currentShownCard && (
             <Button
-              className="mx-auto flex place-self-center mt-[2rem] text-lg px-8 py-4"
+              className="show-more-btn mx-auto flex place-self-center mt-[2rem] text-lg px-8 py-4"
               variant={"default"}
               onClick={() => setCurrentShownCard(currentShownCard + 3)}
             >

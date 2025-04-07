@@ -20,6 +20,7 @@ const Header = () => {
           justify-between
           px-[2rem]
           w-full
+          fixed
         "
     >
       <RLink

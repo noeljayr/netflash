@@ -90,12 +90,8 @@ const Hero = () => {
 
             "
           >
-            <span className="pl-[3rem] xm:pl-[3rem] xd:pl-[7rem] md:pl-[5rem]">
-              {translate("hero.span1")}
-            </span>
-            <span className="pl-[1.5rem] xd:pl-[3.5rem] md:pl-[2.6rem]">
-              {translate("hero.span2")}
-            </span>
+            <span className="">{translate("hero.span1")}</span>
+            <span className="">{translate("hero.span2")}</span>
             <span className="pl-0">{translate("hero.span3")}</span>
           </h1>
 
@@ -267,9 +263,7 @@ const Hero = () => {
               <span className="pl-[3rem] xm:pl-[3rem] xd:pl-[7rem] md:pl-[5rem]">
                 {translate("hero.span1")}
               </span>
-              <span className="pl-[1.5rem] xd:pl-[3.5rem] md:pl-[2.6rem]">
-                {translate("hero.span2")}
-              </span>
+              <span className="">{translate("hero.span2")}</span>
               <span className="pl-0">{translate("hero.span3")}</span>
             </h1>
             <HomeSvgShape />
@@ -297,7 +291,7 @@ const Hero = () => {
               className="button-home button-tool-tip-1"
             >
               <img src={design} alt="icon img" aria-label="hidden" />
-              <span> UI / UX Design </span>
+              <span> {translate("hero.design")} </span>
             </Button>{" "}
             <Button
               variant={"ghost"}
@@ -305,7 +299,7 @@ const Hero = () => {
               className="button-home"
             >
               <img src={dev} alt="icon img" aria-label="hidden" />
-              <span> Development </span>
+              <span> {translate("hero.development")} </span>
             </Button>{" "}
             <Button
               onClick={(e) => hoverHandler(ref3, e)}
@@ -313,7 +307,7 @@ const Hero = () => {
               className="button-home"
             >
               <img src={host} alt="icon img" aria-label="hidden" />
-              <span> Hosting </span>
+              <span> {translate("hero.hosting")} </span>
             </Button>
           </div>
         </div>

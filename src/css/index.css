@@ -1,5 +1,6 @@
 body {
   overflow-x: hidden;
+  padding-top: 8rem;
 }
 
 #root {
@@ -190,7 +191,7 @@ body {
   position: absolute;
   white-space: nowrap;
   opacity: 0;
-  
+
   transition: ease 0.3s;
   left: 1rem;
 }
@@ -316,12 +317,15 @@ nav {
   display: grid;
   grid-template-columns: 12rem auto 12rem;
   position: sticky;
+  top: 0;
   gap: 0;
   z-index: 10;
   width: 100vw;
   overflow: hidden;
   padding-top: 1.5rem;
   margin-bottom: 4rem;
+  background-color: #0e0e11;
+  padding-bottom: 1rem;
 }
 
 .contact-btn {
@@ -355,13 +359,13 @@ p {
   line-height: 180%;
 }
 
-.contact-info{
+.contact-info {
   display: grid;
 }
 
 .contact-info div {
   background: rgba(255, 255, 255, 0.025);
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
 }
 
@@ -369,8 +373,7 @@ p {
   width: fit-content;
 }
 
-
-.imprint-page{
+.imprint-page {
   width: 55rem;
   display: flex;
   flex-direction: column;
@@ -379,15 +382,26 @@ p {
   margin-right: auto;
 }
 
-
 @media not all and (min-width: 880px) {
-  .imprint-page{
-    width: 100%;}
+  .imprint-page {
+    width: 100%;
+  }
 }
 
 @media not all and (min-width: 640px) {
-  .contact-info{
+  .contact-info {
     display: flex;
     flex-direction: column;
   }
+}
+
+
+
+.shape{
+  font-size: 0.8rem;
+}
+
+.show-more-btn{
+  border: 1px white solid;
+  background-color: transparent;
 }

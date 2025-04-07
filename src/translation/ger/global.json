@@ -5,14 +5,18 @@
     "about": "über uns"
   },
   "hero": {
-    "span1": "Ermächtigen.",
-    "span2": "Innovieren.",
-    "span3": "Erheben.",
-    "cta": "Kontaktieren Sie uns",
-    "p1": "Steigern Sie Ihre digitale Präsenz weltweit mit maßgeschneiderten Website-Lösungen für Technikbegeisterte. Bei Netflash verbinden wir Kreativität mit Code, um Online-Meisterwerke zu schaffen.",
-    "heroImageRef1": "Erstellen Sie atemberaubende, benutzerfreundliche Designs, die jeden Klick zum Vergnügen machen.",
-    "heroImageRef2": "Erwecken Sie Ihre Ideen mit reibungslosen, leistungsstarken Websites und Apps zum Leben.",
-    "heroImageRef3": " Halten Sie Ihre Website schnell, sicher und immer online. Mit unserem sorgenfreien Hosting."
+    "span1": "Mordern.",
+    "span2": "Interakiv.",
+    "span3": "Online.",
+    "cta": "Individulles Angebot anfordern",
+    "p1": "Sie möchten Ihren Kunden Informationen online zur Verfügung stellen oder benötigen eine Unternehmenssoftware für Ihre Mitarbeiter? Wir helfen gerne bei der Konzeption, Entwicklung und Integration Ihrer neuen Website oder Webapp.",
+    "heroImageRef1": "Gemeinsam mit unseren Designern erarbeitet der für Sie zuständige Projektleiter ein Funktionskonzept und Designentwurf für Ihren Auftrag.",
+    "heroImageRef2": "Nach der Fertigstellung kümmert sich unser Projektmanager um die Integration der neuen Webseite oder Webapplikation in Ihr Marketingkonzept oder Ihren Betriebsablauf.",
+    "heroImageRef3": "Sobald Sie sich für ein Design entschieden haben, programmieren unsere Entwickler dieses und stellen es online."
+    ,
+    "design": "Konzeption",
+    "development": "Entwicklung",
+    "hosting": "Integration"
   },
   "contact_form": {
     "dialog_title": "Send us a message",
@@ -28,7 +32,7 @@
   },
 
   "projects": {
-    "show_more": "mehr anzeigen",
+    "show_more": "Weitere Projekte anzenigen",
     "view": "Besuchen",
     "category": "Kategorien",
     "read_more": "Mehr lesen",
